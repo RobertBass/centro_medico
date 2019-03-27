@@ -73,12 +73,15 @@
             </Property>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="agendarCitas">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Agenda"/>
+                <Property name="text" type="java.lang.String" value="Agendar Citas"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="agendarCitasActionPerformed"/>
+              </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="atenderCitas">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Atender Citas"/>
               </Properties>

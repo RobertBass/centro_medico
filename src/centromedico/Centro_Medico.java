@@ -6,10 +6,6 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 
-/**
- *
- * @author Victor Roberto Bravo Torres
- */
 public class Centro_Medico extends javax.swing.JFrame {
 
     public Centro_Medico() {
@@ -44,8 +40,8 @@ public class Centro_Medico extends javax.swing.JFrame {
         itemHC = new javax.swing.JMenuItem();
         salir = new javax.swing.JMenuItem();
         menuCitas = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        agendarCitas = new javax.swing.JMenuItem();
+        atenderCitas = new javax.swing.JMenuItem();
         menuInfo = new javax.swing.JMenu();
         info = new javax.swing.JMenuItem();
 
@@ -118,11 +114,16 @@ public class Centro_Medico extends javax.swing.JFrame {
         menuCitas.setText("Citas Medicas");
         menuCitas.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
 
-        jMenuItem1.setText("Agenda");
-        menuCitas.add(jMenuItem1);
+        agendarCitas.setText("Agendar Citas");
+        agendarCitas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                agendarCitasActionPerformed(evt);
+            }
+        });
+        menuCitas.add(agendarCitas);
 
-        jMenuItem2.setText("Atender Citas");
-        menuCitas.add(jMenuItem2);
+        atenderCitas.setText("Atender Citas");
+        menuCitas.add(atenderCitas);
 
         jMenuBar1.add(menuCitas);
 
@@ -189,6 +190,13 @@ public class Centro_Medico extends javax.swing.JFrame {
         
     }//GEN-LAST:event_infoActionPerformed
 
+    private void agendarCitasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_agendarCitasActionPerformed
+        Agenda agenda = new Agenda();
+        this.escritorio.add(agenda);
+        agenda.show();
+    
+    }//GEN-LAST:event_agendarCitasActionPerformed
+
     public static void main(String args[]) {
         /* Set the Metal look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -222,14 +230,14 @@ public class Centro_Medico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem agendarCitas;
+    private javax.swing.JMenuItem atenderCitas;
     public javax.swing.JDesktopPane escritorio;
     private javax.swing.JMenuItem info;
     private javax.swing.JMenuItem itemHC;
     private javax.swing.JMenuItem itemMedicos;
     private javax.swing.JMenuItem itemPaciente;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JLabel labelFondo;
     private javax.swing.JMenu menuCitas;
     private javax.swing.JMenu menuInfo;
