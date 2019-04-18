@@ -496,6 +496,7 @@ public class Modulo_Medicos extends javax.swing.JInternalFrame {
                 ocultarBusqueda();
                 modificar.setEnabled(true);
                 eliminar.setEnabled(true);
+                buscar.setEnabled(false);
             } else {
                 JOptionPane.showMessageDialog(null, "Medico no Registrado");
             }

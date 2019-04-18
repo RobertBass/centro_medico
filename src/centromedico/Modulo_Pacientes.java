@@ -522,6 +522,7 @@ public class Modulo_Pacientes extends javax.swing.JInternalFrame {
                 ocultarBusqueda();
                 modificar.setEnabled(true);
                 eliminar.setEnabled(true);
+                buscar.setEnabled(false);
             } else {
                 JOptionPane.showMessageDialog(null, "Paciente no Registrado");
             }
